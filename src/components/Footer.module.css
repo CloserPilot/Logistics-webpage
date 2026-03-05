@@ -1,0 +1,99 @@
+
+.footer {
+    background: #111;
+    padding: 5rem 0 0;
+    color: #a9a9a9;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.footerWidget {
+    margin-bottom: 3rem;
+}
+
+.footerLogo img {
+    max-width: 150px;
+    margin-bottom: 1.5rem;
+}
+
+.footerText p {
+    line-height: 1.8;
+}
+
+.widgetTitle {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.footerLink {
+    padding: 0;
+    list-style: none;
+}
+
+.footerLink li {
+    margin-bottom: .5rem;
+}
+
+.footerLink a {
+    color: #a9a9a9;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footerLink a:hover {
+    color: #fff;
+}
+
+.footerContact p {
+    margin-bottom: .5rem;
+}
+
+.footerSocial {
+    margin-top: 1.5rem;
+}
+
+.footerSocial a {
+    color: #a9a9a9;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    transition: color 0.3s;
+}
+
+.footerSocial a:hover {
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #333;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
+}

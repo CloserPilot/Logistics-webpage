@@ -1,0 +1,35 @@
+.ctaArea {
+    background-color: var(--bg-theme-color2);
+    padding: 100px 0;
+  }
+  
+  .ctaWrapper {
+    padding: 50px;
+    background-color: var(--bg-theme-color1);
+    border-radius: 10px;
+  }
+  
+  .ctaContent h3 {
+    color: var(--text-theme-color2);
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+  
+  .ctaContent h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .primaryBtn {
+    background-color: var(--bg-theme-color2);
+    border-color: var(--border-theme-color2);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+  }

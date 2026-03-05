@@ -1,0 +1,136 @@
+
+.testimonialSection {
+    position: relative;
+    padding: 120px 0;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    align-items: center;
+}
+
+.colLg6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .colLg6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+.testimonialBlock {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 30px;
+}
+
+.innerBox {
+    position: relative;
+    background-color: var(--bg-theme-color3);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.icon {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 100px;
+    background-color: var(--bg-theme-color2);
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.text {
+    position: relative;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.infoBox {
+    position: relative;
+    padding-left: 90px;
+}
+
+.infoBox .thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.infoBox .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infoBox h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--theme-color1);
+    margin-bottom: 5px;
+}
+
+.infoBox .designation {
+    font-size: 16px;
+    color: var(--theme-color2);
+}
+
+.image-column {
+    position: relative;
+}
+
+.imageBox {
+    position: relative;
+}
+
+.imageBox img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.swiper-container {
+    padding: 0 15px;
+}
+
+.swiper-slide {
+    width: auto;
+}

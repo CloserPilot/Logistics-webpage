@@ -1,0 +1,134 @@
+
+.serviceSection {
+  position: relative;
+  background-color: var(--bg-theme-color1);
+  width: 100%;
+  padding: 120px 0;
+  margin-top: -100px; /* To overlap with the carousel */
+  z-index: 10;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .col {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  padding: 80px 20px 20px;
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.cardIcon {
+  position: absolute;
+  left: 50%;
+  top: -55px;
+  margin-left: -55px;
+  height: 110px;
+  width: 110px;
+  background: var(--bg-theme-color2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  z-index: 2;
+}
+
+.card:hover .cardIcon {
+  background: var(--bg-theme-color1);
+}
+
+.imgBox {
+  overflow: hidden;
+}
+
+.cardImgBottom {
+  transition: 0.5s all;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card:hover .cardImgBottom {
+  transform: scale(1.1);
+}
+
+.cardTitle {
+  color: var(--theme-color1);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 15px;
+}
+
+.cardText {
+  font-size: 16px;
+  line-height: 32px;
+  color: #7c858c;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.servicesText {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+.servicesText p {
+  font-size: 18px;
+  color: #8fa1ae;
+  font-weight: 400;
+}
+
+.servicesText strong {
+  border-bottom: 2px solid var(--border-theme-color2);
+  color: #ffffff;
+}

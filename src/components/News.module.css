@@ -1,0 +1,137 @@
+
+.newsSection {
+    position: relative;
+    padding: 120px 0;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.secTitle {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.subTitle {
+    display: block;
+    font-size: 16px;
+    color: var(--theme-color2);
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.secTitle h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--theme-color1);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.colLg4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .colLg4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+.newsBlock {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.innerBox {
+    position: relative;
+}
+
+.imageBox {
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.imageBox .image img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.newsBlock:hover .imageBox .image img {
+    transform: scale(1.1);
+}
+
+.lowerContent {
+    position: relative;
+    background-color: var(--bg-theme-color3);
+    padding: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.lowerContent .postDate {
+    position: absolute;
+    right: 30px;
+    top: -20px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--bg-theme-color2);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.lowerContent h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--theme-color1);
+    margin-bottom: 10px;
+}
+
+.lowerContent h4 a {
+    color: var(--theme-color1);
+    text-decoration: none;
+}
+
+.lowerContent .text {
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.lowerContent .readMore {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--theme-color2);
+    text-decoration: none;
+}

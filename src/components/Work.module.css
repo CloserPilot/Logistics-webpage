@@ -1,0 +1,124 @@
+
+.workArea {
+    position: relative;
+    background-color: var(--bg-theme-color3);
+    padding-bottom: 90px;
+    padding-top: 120px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    justify-content: center;
+}
+
+.colLg3 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 992px) {
+    .colLg3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+.workBlock {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.workBlock::before {
+    position: absolute;
+    content: "";
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 1px;
+    background-color: #e5e5e5;
+}
+
+.workBlock:last-child::before {
+    display: none;
+}
+
+.innerBox {
+    position: relative;
+    text-align: center;
+}
+
+.workIcon {
+    margin-bottom: 25px;
+}
+
+.workIcon i {
+    font-size: 50px;
+    color: var(--theme-color2);
+    transition: all 300ms ease;
+}
+
+.workBlock:hover .workIcon i {
+    transform: scale(1.1);
+}
+
+.workTitle h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--theme-color1);
+    margin-bottom: 15px;
+}
+
+.workDescription p {
+    font-size: 16px;
+    color: var(--text-theme-color1);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.count {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 50%;
+    color: var(--theme-color1);
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    transition: all 300ms ease;
+}
+
+.workBlock:hover .count {
+    background-color: var(--bg-theme-color2);
+    color: #ffffff;
+}

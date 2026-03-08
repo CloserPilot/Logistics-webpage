@@ -1,11 +1,4 @@
-import Header from "./Header";
-import Footer from "./Footer";
-import Hero from "./Hero";
-import Tracking from "./Tracking";
-
-export {
-  Header,
-  Footer,
-  Hero,
-  Tracking
-}
+export { default as Header } from './Header';
+export { default as Footer } from './Footer';
+export { default as Hero } from './Hero';
+export { default as Tracking } from './Tracking';

@@ -7,6 +7,9 @@ export default defineConfig({
     watch: {
       usePolling: true,
       interval: 100
-    }
+    },
+    host: true,          // Escucha en todas las interfaces
+    port: 5173,          // Puedes cambiar el puerto si quieres
+    strictPort: false,   // No fuerza error si el puerto está ocupado
   }
 })

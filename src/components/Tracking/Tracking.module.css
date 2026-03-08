@@ -3,7 +3,7 @@
     width: 90%; /* Set the width to 90% of the parent container */
     max-width: 800px; /* Set a maximum width of 800px */
     padding: 80px 40px; /* Add padding to the top/bottom and left/right */
-    background-color: #f9f5ff; /* Set a light purple background color */
+    background-color: #dfbee4; /* Set a light purple background color */
     border: 1px solid #f9f5ff; /* Add a border with the same color */
     border-radius: 10px; /* Round the corners */
     text-align: center; /* Center the text */
@@ -16,7 +16,7 @@
 /* Style for the input field */
 .trackingInput {
     padding: 10px; /* Add padding */
-    width: 65%; /* Set the width to 65% */
+    width: 50%; /* Set the width to 65% */
     margin-top: 10px; /* Add some top margin */
     border-radius: 4px; /* Round the corners */
     border: 1px solid #ccc; /* Add a light gray border */
@@ -47,6 +47,10 @@
 .tracking h1 {
     color: #6200ee; /* Set a purple color for the heading */
     font-family: sans-serif; /* Use a sans-serif font */
+}
+
+.trackingLabel{
+  margin: 20px
 }
 
 /* Media query for smaller screens */

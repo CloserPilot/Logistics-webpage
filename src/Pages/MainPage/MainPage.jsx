@@ -1,11 +1,19 @@
-import { Header } from "../../components";
+import Header from "../Header/Header";
+import Hero from "../Hero/Hero";
+import Tracking from "../Tracking/Tracking";
+import Footer from "../Footer/Footer";
 
-function MainPage(){
-  return(
+const MainPage = () => {
+  return (
     <>
-      <Header/>
+      <Header />
+      <main>
+        <Hero />
+        <Tracking />
+      </main>
+      <Footer />
     </>
-  )
-}
+  );
+};
 
 export default MainPage;

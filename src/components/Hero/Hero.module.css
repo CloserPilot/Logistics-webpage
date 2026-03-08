@@ -1,0 +1,48 @@
+/* Style for the hero section container */
+.hero {
+    height: 400px; /* Set a fixed height for the hero section */
+    overflow: hidden; /* Hide any content that overflows the container */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    background-color: #f2f2f2; /* Set a light gray background color */
+    position: relative; /* Set position to relative for absolute positioning of child elements */
+    bottom: 20px; /* Move the hero section up by 20px */
+}
+
+/* Style for the hero image */
+.heroImg {
+    width: 100%; /* Make the image take up the full width of the container */
+    height: 100%; /* Make the image take up the full height of the container */
+    object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
+    opacity: 80%; /* Set the opacity to 80% */
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+}
+
+/* Style for the text overlay on the hero image */
+.heroText {
+    position: absolute; /* Position the text absolutely within the hero container */
+    top: 50%; /* Position the text 50% from the top */
+    left: 50%; /* Position the text 50% from the left */
+    transform: translate(-50%, -50%); /* Center the text perfectly */
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding around the text */
+}
+
+/* Style for the main heading in the hero text */
+.heroText h2 {
+    font-size: 40px; /* Set the font size for the heading */
+}
+
+/* Style for the paragraph in the hero text */
+.heroText p {
+    font-size: 20px; /* Set the font size for the paragraph */
+}
+
+/* Media query for smaller screens (max-width: 600px) */
+@media (max-width: 600px) {
+    .heroImg {
+        object-fit: cover; /* Ensure the image covers the container on smaller screens */
+    }
+}

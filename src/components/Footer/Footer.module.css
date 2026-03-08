@@ -1,0 +1,44 @@
+/* Style for the footer section */
+.footer {
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* Set a gradient background */
+    color: white; /* Set the text color to white */
+    padding: 40px 20px 20px; /* Add padding to the top, sides, and bottom */
+    font-family: sans-serif; /* Use a sans-serif font */
+}
+
+/* Style for the columns within the footer */
+.footerColumns {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the columns horizontally */
+    flex-wrap: wrap; /* Allow the columns to wrap to the next line on smaller screens */
+    gap: 10px; /* Add a gap between the columns */
+    text-align: left; /* Align the text to the left */
+}
+
+/* Style for the list items in the columns */
+.column li {
+    margin: 6px 0; /* Add a small margin to the top and bottom */
+    font-size: 14px; /* Set the font size */
+    list-style: none; /* Remove the default list bullets */
+    padding: 0; /* Remove any padding */
+}
+
+/* Style for the links in the columns */
+.column a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Remove the underline */
+    transition: color 0.2s ease; /* Add a smooth color transition on hover */
+}
+
+/* Style for the links on hover */
+.column a:hover {
+    text-decoration: underline; /* Add an underline on hover */
+    color: #ffd700; /* Change the color to gold on hover */
+}
+
+/* Style for the bottom section of the footer */
+.footerBottom {
+    text-align: center; /* Center the text */
+    opacity: 0.8; /* Set the opacity to 80% */
+    font-size: 12px; /* Set a smaller font size */
+}

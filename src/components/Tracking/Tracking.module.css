@@ -1,0 +1,65 @@
+/* Style for the tracking section container */
+.tracking {
+    width: 90%; /* Set the width to 90% of the parent container */
+    max-width: 800px; /* Set a maximum width of 800px */
+    padding: 80px 40px; /* Add padding to the top/bottom and left/right */
+    background-color: #f9f5ff; /* Set a light purple background color */
+    border: 1px solid #f9f5ff; /* Add a border with the same color */
+    border-radius: 10px; /* Round the corners */
+    text-align: center; /* Center the text */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin: 40px auto; /* Center the container horizontally */
+    font-size: 18px; /* Set the base font size */
+    font-family: sans-serif; /* Use a sans-serif font */
+}
+
+/* Style for the tracking timeline heading */
+.trackingTimeline h3 span {
+    background-color: rgb(7, 114, 7); /* Set a green background color */
+    color: white; /* Set the text color to white */
+    letter-spacing: 1px; /* Add some letter spacing */
+}
+
+/* Style for the tracking summary span */
+.trackingSummary span {
+    font-weight: bold; /* Make the text bold */
+    background-color: rgb(7, 114, 7); /* Set a green background color */
+    color: white; /* Set the text color to white */
+    padding: 2px 8px; /* Add some padding */
+}
+
+/* Style for the input field */
+.tracking input {
+    padding: 10px; /* Add padding */
+    width: 65%; /* Set the width to 65% */
+    margin-top: 10px; /* Add some top margin */
+    border-radius: 4px; /* Round the corners */
+    border: 1px solid #ccc; /* Add a light gray border */
+    font-size: 20px; /* Set the font size */
+    margin-bottom: 40px; /* Add some bottom margin */
+}
+
+/* Style for the tracking button */
+.trackingBtn {
+    padding: 10px 45px; /* Add padding */
+    margin-left: 10px; /* Add some left margin */
+    background-color: #8E2DE2; /* Set a purple background color */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove the border */
+    border-radius: 4px; /* Round the corners */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+    font-size: 20px; /* Set the font size */
+    text-decoration: none; /* Remove the underline */
+    margin-top: 60px; /* Add some top margin */
+}
+
+/* Style for the tracking button on hover */
+.trackingBtn:hover {
+    background-color: #4A00E0; /* Darken the background color on hover */
+}
+
+/* Style for the main heading in the tracking section */
+.tracking h1 {
+    color: #6200ee; /* Set a purple color for the heading */
+    font-family: sans-serif; /* Use a sans-serif font */
+}

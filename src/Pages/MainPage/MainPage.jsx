@@ -1,3 +1,4 @@
+//import Header from "../../components/Header/Header";
 import { Header, Hero, Tracking, Footer } from '../../components'
 
 const MainPage = () => {

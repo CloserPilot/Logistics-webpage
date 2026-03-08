@@ -15,23 +15,26 @@
     text-align: left; /* Align the text to the left */
 }
 
-/* Style for the list items in the columns */
-.column li {
+.column {
+    flex: 1;
+    min-width: 150px;
+    margin: 10px;
+}
+
+.columnItem {
     margin: 6px 0; /* Add a small margin to the top and bottom */
     font-size: 14px; /* Set the font size */
     list-style: none; /* Remove the default list bullets */
     padding: 0; /* Remove any padding */
 }
 
-/* Style for the links in the columns */
-.column a {
+.columnLink {
     color: white; /* Set the link color to white */
     text-decoration: none; /* Remove the underline */
     transition: color 0.2s ease; /* Add a smooth color transition on hover */
 }
 
-/* Style for the links on hover */
-.column a:hover {
+.columnLink:hover {
     text-decoration: underline; /* Add an underline on hover */
     color: #ffd700; /* Change the color to gold on hover */
 }
@@ -41,4 +44,17 @@
     text-align: center; /* Center the text */
     opacity: 0.8; /* Set the opacity to 80% */
     font-size: 12px; /* Set a smaller font size */
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .footerColumns {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .column {
+        min-width: unset;
+    }
 }

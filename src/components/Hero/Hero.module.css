@@ -45,4 +45,12 @@
     .heroImg {
         object-fit: cover; /* Ensure the image covers the container on smaller screens */
     }
+
+    .heroText h2 {
+        font-size: 32px; /* Reduce font size for smaller screens */
+    }
+
+    .heroText p {
+        font-size: 18px; /* Reduce font size for smaller screens */
+    }
 }

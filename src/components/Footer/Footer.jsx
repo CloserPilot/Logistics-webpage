@@ -6,42 +6,42 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerColumns}>
         <ul className={styles.column}>
-          <li>
+          <li className={styles.columnItem}>
             <strong>Company</strong>
           </li>
-          <li>
-            <a href="#">About Us</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>About Us</a>
           </li>
-          <li>
-            <a href="#">Careers</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Careers</a>
           </li>
-          <li>
-            <a href="#">Blog</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Blog</a>
           </li>
         </ul>
         <ul className={styles.column}>
-          <li>
+          <li className={styles.columnItem}>
             <strong>Support</strong>
           </li>
-          <li>
-            <a href="#">Contact</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Contact</a>
           </li>
-          <li>
-            <a href="#">Help Center</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Help Center</a>
           </li>
-          <li>
-            <a href="#">Track Shipment</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Track Shipment</a>
           </li>
         </ul>
         <ul className={styles.column}>
-          <li>
+          <li className={styles.columnItem}>
             <strong>Legal</strong>
           </li>
-          <li>
-            <a href="#">Privacy Policy</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Privacy Policy</a>
           </li>
-          <li>
-            <a href="#">Terms of Use</a>
+          <li className={styles.columnItem}>
+            <a href="#" className={styles.columnLink}>Terms of Use</a>
           </li>
         </ul>
       </div>

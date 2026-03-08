@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipment Tracking Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="logo-title">
+          <i class="fa-solid fa-truck-fast"></i> SHIPNETIC
+        </h1>
+      
+        <button class="hamburger" id="hamburger-btn">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      
+        <ul class="navigation" id="nav-menu">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="index.html">Tracking</a></li>
+          <li><a href="#Contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+
+
+    <main>
+        <section class="hero">
+            <img src="Images/shipnow.jpg" alt="Delivery Hero" class="hero-img" />
+            <div class="hero-text">
+              <h2>Your package is in safe hands.</h2>
+              <p>Track your shipment below.</p>
+            </div>
+          </section>
+          
+        
+        <div class="tracking">
+            <h1>Track Your Shipment</h1>
+            <label for="number">
+                Tracking number:
+            </label>
+            <input type="text">
+            <a href="tracking-detail.html" class="tracking-btn">Track</a>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-columns">
+          <ul class="column">
+            <li><strong>Company</strong></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+          <ul class="column">
+            <li><strong>Support</strong></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Shipment</a></li>
+          </ul>
+          <ul class="column">
+            <li><strong>Legal</strong></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2024 Shipnetic. All rights reserved.
+        </div>
+      </footer>
+      <script>
+        const hamburger = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+      
+        hamburger.addEventListener('click', () => {
+          navMenu.classList.toggle('show');
+        });
+      </script>
+           
+</body>
+</html>

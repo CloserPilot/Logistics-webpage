@@ -1,39 +1,35 @@
-
-import React from 'react';
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import Services from './components/Services';
-import About from './components/About';
-import Testimonials from './components/Testimonials'; // Import the new Testimonials component
-import Work from './components/Work';
-import FunFact from './components/FunFact';
-import Projects from './components/Projects';
-import Team from './components/Team';
-import Faqs from './components/Faqs';
-import Quote from './components/Quote';
-import Client from './components/Client';
-import CallToAction from './components/CallToAction';
-import Footer from './components/Footer';
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      <Navbar />
-      <Carousel />
-      <Services />
-      <About />
-      <Testimonials /> 
-      <Work />
-      <FunFact />
-      <Projects />
-      <Team />
-      <Faqs />
-      <Quote />
-      <Client />
-      <CallToAction />
-      <Footer />
-    </div>
-  );
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App

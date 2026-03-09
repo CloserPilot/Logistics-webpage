@@ -1,11 +1,16 @@
 import React from 'react';
 import Contact from '../../components/Contact';
+import { Footer, Header } from '../../components';
 
 const ContactPage = () => {
   return (
-    <div>
-      <Contact />
-    </div>
+    <>
+      <Header/>
+        <main>
+          <Contact />
+        </main>
+      <Footer/>
+    </>
   );
 };
 

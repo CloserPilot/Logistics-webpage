@@ -4,6 +4,7 @@
   padding: 50px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: white;
+  gap: 10px;
 }
 
 .contactInfo, .contactForm {
@@ -36,7 +37,7 @@
 }
 
 .formGroup input, .formGroup textarea {
-  width: 100%;
+  width: stretch;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;

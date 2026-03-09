@@ -5,11 +5,7 @@ import { Footer, Header } from '../../components';
 const ContactPage = () => {
   return (
     <>
-      <Header/>
-        <main>
-          <Contact />
-        </main>
-      <Footer/>
+      <Contact />
     </>
   );
 };

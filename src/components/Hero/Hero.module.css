@@ -10,6 +10,7 @@
     bottom: 20px; /* Move the hero section up by 20px */
 }
 
+
 /* Style for the hero image */
 .heroImg {
     width: 100%; /* Make the image take up the full width of the container */
@@ -17,6 +18,11 @@
     object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
     opacity: 80%; /* Set the opacity to 80% */
     max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    transition: transform 0.5s ease-in-out; /* Add a transition for a subtle zoom effect */
+}
+
+.hero:hover .heroImg {
+    transform: scale(1.05); /* Zoom in on hover */
 }
 
 /* Style for the text overlay on the hero image */

@@ -1,93 +1,86 @@
+/* Footer base */
 .footer {
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-    color: white;
-    padding: 40px 20px 20px;
-    font-family: sans-serif;
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  color: white;
+  padding: 40px 20px 20px;
+  font-family: sans-serif;
 }
 
 /* Columns wrapper */
 .footerColumns {
-    display: flex;
-    justify-content: center; /* Centra las columnas horizontalmente */
-    flex-wrap: wrap;
-    gap: 40px;               /* Espacio entre columnas */
-    text-align: left;        /* Contenido de cada columna alineado a la izquierda */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px; 
+  text-align: left;
 }
 
 /* Each column */
 .column {
-    flex: 0 1 200px; /* No crece demasiado, ancho fijo mínimo */
-    display: flex;
-    flex-direction: column; /* Los items apilados verticalmente */
-    align-items: flex-start; /* Alineación del contenido a la izquierda */
-    margin: 10px;
-}
-
-/* Centrar solo el primer item de cada columna */
-.columnItem:first-child {
-    justify-content: center; /* Centrado horizontal */
-    text-align: center;
-    width: 100%;
-    gap: 0; /* Quita el espacio si solo tiene texto */
+  flex: 0 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
 }
 
 /* Column items */
 .columnItem {
-    margin: 8px 0;
-    list-style: none;
-    padding: 0;
-    display: flex;        /* Flex para icono y texto */
-    align-items: center;  /* Centrado vertical del icono con el texto */
-    gap: 10px;            /* Espacio entre icono y texto */
+  margin: 8px 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.columnItem i{
-  margin-left: 18px;
+.columnItem i {
+  margin-left: 0; /* solo para separar iconos si hace falta */
 }
 
 /* Column titles */
 .columnItem strong {
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%; /* ocupa todo el ancho de la columna */
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* Links */
 .columnLink {
-    color: white;
-    text-decoration: none;
-    font-size: clamp(15px, 1.5vw, 17px);
-    transition: color 0.2s ease;
+  color: white;
+  text-decoration: none;
+  font-size: clamp(15px, 1.5vw, 17px);
+  transition: color 0.2s ease;
 }
 
 .columnLink:hover {
-    text-decoration: underline;
-    color: #ffd700;
+  color: #ffd700;
+  text-decoration: underline;
 }
 
-.columnLink.noHover:hover {
-  color: inherit;          /* Mantiene el color original */
-  text-decoration: none;   /* Quita el subrayado */
+/* Links que no cambian al hover */
+.noHover:hover {
+  color: inherit;
+  text-decoration: none;
   cursor: default;
 }
 
 /* Bottom copyright */
 .footerBottom {
-    text-align: center;
-    opacity: 0.8;
-    font-size: clamp(12px, 1vw, 14px);
-    margin-top: 25px;
+  text-align: center;
+  opacity: 0.8;
+  font-size: clamp(12px, 1vw, 14px);
+  margin-top: 25px;
 }
 
-/* Mobile layout */
+/* Responsive mobile layout */
 @media (max-width: 600px) {
-    .footerColumns {
-        flex-direction: column;
-        align-items: center; /* Columnas centradas en móvil */
-        text-align: left;    /* Contenido sigue alineado a la izquierda */
-    }
-
-    .column {
-        min-width: unset;
-        align-items: flex-start;
-    }
+  .footerColumns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    align-items: center;
+  }
 }

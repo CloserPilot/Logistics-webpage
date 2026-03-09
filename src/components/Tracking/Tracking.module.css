@@ -1,13 +1,14 @@
 /* Style for the tracking section container */
 .tracking {
-    width: 90%; /* Set the width to 90% of the parent container */
+    width: 80%; /* Set the width to 90% of the parent container */
     max-width: 800px; /* Set a maximum width of 800px */
     padding: 80px 40px; /* Add padding to the top/bottom and left/right */
-    background-color: #dfbee4; /* Set a light purple background color */
-    border: 1px solid #f9f5ff; /* Add a border with the same color */
+    background-color: #ffffff; /* Set a white background color */
+    border: 2px solid; /* Add a border */
+    border-image: linear-gradient(to right, #4A00E0, #8E2DE2) 1; /* Use a gradient for the border */
     border-radius: 10px; /* Round the corners */
     text-align: center; /* Center the text */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Add a more pronounced box shadow */
     margin: 40px auto; /* Center the container horizontally */
     font-size: 18px; /* Set the base font size */
     font-family: sans-serif; /* Use a sans-serif font */
@@ -16,7 +17,7 @@
 /* Style for the input field */
 .trackingInput {
     padding: 10px; /* Add padding */
-    width: 50%; /* Set the width to 65% */
+    width: 65%; /* Set the width to 65% */
     margin-top: 10px; /* Add some top margin */
     border-radius: 4px; /* Round the corners */
     border: 1px solid #ccc; /* Add a light gray border */
@@ -28,7 +29,7 @@
 .trackingBtn {
     padding: 10px 45px; /* Add padding */
     margin-left: 10px; /* Add some left margin */
-    background-color: #8E2DE2; /* Set a purple background color */
+    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* Set a gradient background */
     color: white; /* Set the text color to white */
     border: none; /* Remove the border */
     border-radius: 4px; /* Round the corners */
@@ -36,11 +37,12 @@
     font-size: 20px; /* Set the font size */
     text-decoration: none; /* Remove the underline */
     margin-top: 60px; /* Add some top margin */
+    transition: opacity 0.3s ease; /* Add a transition for the opacity */
 }
 
 /* Style for the tracking button on hover */
 .trackingBtn:hover {
-    background-color: #4A00E0; /* Darken the background color on hover */
+    opacity: 0.9; /* Reduce the opacity on hover */
 }
 
 /* Style for the main heading in the tracking section */
@@ -60,7 +62,6 @@
     }
 
     .trackingInput {
-        width: 100%;
         margin-bottom: 20px;
     }
 

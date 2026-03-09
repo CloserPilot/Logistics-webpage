@@ -1,61 +1,98 @@
 .contactContainer {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* permite que en móviles se apilen */
+  justify-content: center;
+  gap: 30px;
   padding: 50px;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  gap: 10px;
 }
 
 .contactInfo, .contactForm {
-  width: 45%;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px;
-  border-radius: 10px;
+  flex: 1 1 400px; /* crece y se encoge según pantalla, mínimo 400px */
+  max-width: 500px;
+  background: #ffffffe3;
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  height: fit-content ;
 }
 
+/* Encabezados */
 .contactInfo h2, .contactForm h2 {
-  color: white;
-  border-bottom: 2px solid #1c87c9;
+  color: #6200ee;
+  border-bottom: 2px solid #8E2DE2;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  font-size: 1.8rem;
 }
 
 .contactInfo p {
-  margin: 10px 0;
+  margin: 0;
   font-size: 16px;
+  line-height: 1.6;
+  flex: 1 1 120px; /* mínimo 120px, crece según espacio */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Formulario */
+.contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
 .formGroup {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .formGroup label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.formGroup input, .formGroup textarea {
-  width: stretch;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8px;
+  font-weight: 600;
   color: #333;
 }
 
-.submitButton {
-  background-color: #1c87c9;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.formGroup input, .formGroup textarea {
+  width: 100%;
+  box-sizing: border-box; /* importante para que padding no rompa layout */
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  outline: none;
+  background: #f9f9f9;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.formGroup input:focus, .formGroup textarea:focus {
+  border-color: #8E2DE2;
+  box-shadow: 0 0 0 2px rgba(142,45,226,0.2);
+}
+
+/* Botón */
+.submitButton {
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .submitButton:hover {
-  background-color: #15659f;
+  opacity: 0.6;
+}
+
+/* Responsive */
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .contactInfo p {
+    display: block;
+  }
 }

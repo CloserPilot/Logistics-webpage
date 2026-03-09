@@ -1,57 +1,31 @@
+import React from "react";
 import styles from "./Status.module.css";
 
 function Status() {
+  const steps = [
+    { title: "Package Received", location: "Mumbai Warehouse", date: "April 20, 2025 – 11:00 AM", completed: true },
+    { title: "Shipped", location: "Left Mumbai Facility", date: "April 21, 2025 – 02:45 PM", completed: true },
+    { title: "In Transit", location: "Delhi Distribution Center", date: "April 22, 2025 – 08:15 AM", active: true },
+    { title: "Out for Delivery", location: "Your Local Hub", date: "Expected: April 23, 2025" },
+    { title: "Expected Delivery Date", location: "Connaught Place, Delhi", date: "April 23, 2025 – After 10:00 AM" },
+  ];
+
   return (
     <div className={styles.trackingTimeline}>
       <h3>Tracking #: <span>AWB6856330</span></h3>
-      <p><strong>From:</strong> Mumbai</p>
-      <p><strong>To:</strong> Delhi</p>
-      <br />
-
-      <div className={`${styles.step} ${styles.completed}`}>
-        <div className={styles.dot}><span>✔</span></div>
-        <div className={styles.content}>
-          <h4><i className="fas fa-box"></i> Package Received</h4>
-          <p>Mumbai Warehouse</p>
-          <small>April 20, 2025 – 11:00 AM</small>
+      {steps.map((step, i) => (
+        <div
+          key={i}
+          className={`${styles.step} ${step.completed ? styles.completed : ""} ${step.active ? styles.active : ""}`}
+        >
+          <div className={styles.dot}>{step.completed ? "✔" : ""}</div>
+          <div className={styles.content}>
+            <h4>{step.title}</h4>
+            <p>{step.location}</p>
+            <small>{step.date}</small>
+          </div>
         </div>
-      </div>
-
-      <div className={`${styles.step} ${styles.completed}`}>
-        <div className={styles.dot}><span>✔</span></div>
-        <div className={styles.content}>
-          <h4>Shipped</h4>
-          <p>Left Mumbai Facility</p>
-          <small>April 21, 2025 – 02:45 PM</small>
-        </div>
-      </div>
-
-      <div className={`${styles.step} ${styles.active}`}>
-        <div className={styles.dot}></div>
-        <div className={styles.content}>
-          <h4>In Transit</h4>
-          <p>Delhi Distribution Center</p>
-          <small>April 22, 2025 – 08:15 AM</small>
-        </div>
-      </div>
-
-      <div className={styles.step}>
-        <div className={styles.dot}></div>
-        <div className={styles.content}>
-          <h4>Out for Delivery</h4>
-          <p>Your Local Hub</p>
-          <small>Expected: April 23, 2025</small>
-        </div>
-      </div>
-
-      <div className={styles.step}>
-        <div className={styles.dot}></div>
-        <div className={styles.content}>
-          <h4><i className="fa-solid fa-hand-holding-heart"></i> Expected Delivery Date</h4>
-          <p>Connaught Place, Delhi</p>
-          <small>April 23, 2025 – After 10:00 AM</small>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { Footer, Header, Status } from "../../components";
+import { Status } from "../../components";
 
 function StatusPage() {
   return (

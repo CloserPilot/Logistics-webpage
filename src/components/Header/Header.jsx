@@ -3,7 +3,7 @@ import styles from "./Header.module.css";
 import { NavLink } from "react-router";
 import { routes } from '../../routes/routes.jsx'
 
-const Header = () => {
+function Header(){
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // cerrar menú cuando pasa a desktop

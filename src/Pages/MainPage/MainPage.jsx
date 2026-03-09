@@ -1,4 +1,4 @@
-import { Header, Hero, Tracking, Footer } from '../../components'
+import  { Hero, Tracking } from '../../components'
 
 function MainPage(){
   return (

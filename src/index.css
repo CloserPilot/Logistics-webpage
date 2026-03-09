@@ -16,12 +16,15 @@ body, html #root {
 }
 
 .main-content {
-  flex: 1;
-  padding-top: 40px;
+  flex: 1;                  /* ocupa todo el espacio dentro de .wrapper */
+  display: flex;            /* lo hacemos flex para que los hijos puedan expandirse */
+  flex-direction: column;    /* para que el flujo siga vertical */
+  padding-top: 70px;      /* igual a la altura del header */
 }
 
 .centered {
+  flex: 1; /* ocupa todo el espacio disponible dentro del main */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* centra verticalmente */
+  flex-direction: column; /* si quieres mantener dirección vertical */
 }

@@ -1,12 +1,11 @@
-import React from 'react';
 import styles from './Contact.module.css';
 
-const Contact = () => {
+function Contact(){
   return (
     <div className={styles.contactContainer}>
       <div className={styles.contactInfo}>
         <h2>Información de Contacto</h2>
-        <p><strong>Teléfono:</strong> +1 (555) 123-4567</p>
+        <p><strong>Teléfono:</strong> (271) XXX-XXXX</p>
         <p><strong>Horario:</strong> Lunes a Viernes, 9:00 AM - 6:00 PM</p>
         <p><strong>Correo Electrónico:</strong> contacto@shipnetic.com</p>
       </div>

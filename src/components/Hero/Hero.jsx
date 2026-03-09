@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import shipnowImage from "../../assets/shipnow.jpg";
 
-const Hero = () => {
+function Hero(){
   return (
     <section className={styles.hero}>
       <img src={shipnowImage} alt="Delivery Hero" className={styles.heroImg} />

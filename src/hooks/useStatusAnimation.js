@@ -1,6 +1,7 @@
 import { useState, useLayoutEffect } from 'react';
 
 function useStatusAnimation(steps) {
+  // useState se encarga de la inicialización. El reseteo se fuerza con una key en el componente padre.
   const [animatedSteps, setAnimatedSteps] = useState(() => 
     steps.map(step => ({ ...step, visualStatus: 'pending', lineCompleted: false }))
   );
@@ -33,8 +34,7 @@ function useStatusAnimation(steps) {
       timeoutIds.push(t1);
     };
 
-    // Se reinicia el estado visual al principio para una animación limpia
-    setAnimatedSteps(steps.map(step => ({ ...step, visualStatus: 'pending', lineCompleted: false })));
+    // La línea problemática que causaba el re-render ha sido eliminada.
 
     const initialTimeout = setTimeout(() => animate(0), 100);
     timeoutIds.push(initialTimeout);
@@ -42,7 +42,7 @@ function useStatusAnimation(steps) {
     return () => {
       timeoutIds.forEach(clearTimeout);
     };
-  }, [steps]); // Dependencia clave: la animación se reinicia si los pasos cambian.
+  }, [steps]);
 
   return animatedSteps;
 }

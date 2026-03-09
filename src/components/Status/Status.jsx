@@ -1,11 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styles from './Status.module.css';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import useStatusAnimation from '../../hooks/useStatusAnimation';
 
 // --- Componente Interno (Presentacional) ---
-// Es un componente "tonto" que solo se encarga de renderizar la UI.
-// No tiene lógica de estado propia.
 function StatusTimeline({ steps }) {
   const animatedSteps = useStatusAnimation(steps);
 
@@ -31,14 +29,20 @@ function StatusTimeline({ steps }) {
 }
 
 // --- Componente Envoltorio (Contenedor) ---
-// Se encarga de la lógica de re-montaje para evitar bugs visuales.
 function Status({ steps }) {
-  // 1. Usa el hook para saber si estamos en móvil.
   const isMobile = useMediaQuery('(max-width: 700px)');
 
-  // 2. Usa esa información para generar una key, forzando el re-montaje
-  // del componente hijo al cruzar el breakpoint.
-  return <StatusTimeline steps={steps} key={isMobile ? 'mobile' : 'desktop'} />;
+  // Creamos una key robusta que cambia si los datos o la vista cambian.
+  // useMemo asegura que la key solo se recalcula si `steps` o `isMobile` cambian.
+  const componentKey = useMemo(() => {
+    // Usamos JSON.stringify para crear un identificador único basado en el contenido de steps.
+    const stepsIdentifier = JSON.stringify(steps.map(s => `${s.title}-${s.completed}-${s.active}`));
+    return `${isMobile ? 'mobile' : 'desktop'}-${stepsIdentifier}`;
+  }, [steps, isMobile]);
+
+  // Al cambiar la key, React desmonta el `StatusTimeline` antiguo y monta uno
+  // nuevo, reseteando su estado y su animación de forma limpia y segura.
+  return <StatusTimeline steps={steps} key={componentKey} />;
 }
 
 export default Status;

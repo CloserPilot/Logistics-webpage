@@ -3,3 +3,4 @@ export { default as Footer   } from './Footer';
 export { default as Hero     } from './Hero';
 export { default as Tracking } from './Tracking';
 export { default as Status   } from './Status'
+export { default as Contact  } from './Contact';

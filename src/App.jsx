@@ -1,6 +1,5 @@
-//import MainPage from "./pages/MainPage";
 import { Routes, Route } from "react-router";
-import { MainPage, TrackingPage, StatusPage} from "./pages";
+import { MainPage, TrackingPage, StatusPage, ContactPage} from "./pages";
 
 
 function App() {
@@ -9,6 +8,7 @@ function App() {
       <Route path="/"        element={<MainPage/>}/>
       <Route path="tracking" element={<TrackingPage/>}/>
       <Route path="status"   element={<StatusPage/>}/>
+      <Route path="contact"  element={<ContactPage/>}/>
     </Routes>
   );
 }

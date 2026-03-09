@@ -27,7 +27,7 @@ const Header = () => {
           <Link to="/tracking">Rastreo</Link>
         </li>
         <li>
-          <Link to="/contacto">Contacto</Link>
+          <Link to="/contact">Contacto</Link>
         </li>
       </ul>
     </header>

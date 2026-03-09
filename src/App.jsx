@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router";
 import { MainPage, TrackingPage, StatusPage, ContactPage} from "./pages";
 import { Footer, Header } from "./components";
 
-
 function App() {
   return (
     <div className='wrapper'>

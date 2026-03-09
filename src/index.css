@@ -1,12 +1,11 @@
 /* Basic Styles */
-body, html {
+body, html #root {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #fff;
   color: #333;
   overflow-x: hidden;
-  margin: 0;
   height: 100%;
 }
 
@@ -18,4 +17,11 @@ body, html {
 
 .main-content {
   flex: 1;
+  padding-top: 40px;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

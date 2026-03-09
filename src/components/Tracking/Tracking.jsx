@@ -1,16 +1,24 @@
-
 import styles from "./Tracking.module.css";
-import { Link } from "react-router";
 
-const Tracking = () => {
+function Tracking(){
   return (
     <div className={styles.tracking}>
       <h1>Rastrea tu paquete</h1>
-      <label htmlFor="number" className={styles.trackingLabel}>ID de rastreo:</label>
-      <input type="text" className={styles.trackingInput} />
-      <Link to="/status" className={styles.trackingBtn}>
-        Track
-      </Link>
+
+      <form className={styles.trackingForm}>
+        <div className={styles.trackingBar}>
+          <input
+            id="tracking"
+            type="text"
+            placeholder="Ingresa tu ID de rastreo"
+            className={styles.trackingInput}
+          />
+
+          <button type="submit" className={styles.trackingBtn}>
+            Track
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

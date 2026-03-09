@@ -1,20 +1,27 @@
 import { Routes, Route } from "react-router";
-import { MainPage, TrackingPage, StatusPage, ContactPage} from "./pages";
+import { routes } from "./routes";
 import { Footer, Header } from "./components";
+import { ScrollToTop } from './components/'
 
 function App() {
   return (
-    <div className='wrapper'>
-      <Header/>
-      <main class="main-content">
+    <div className="wrapper">
+      <Header />
+      <ScrollToTop />
+
+      <main className="main-content">
         <Routes>
-          <Route path="/"        element={<MainPage/>}/>
-          <Route path="tracking" element={<TrackingPage/>}/>
-          <Route path="status"   element={<StatusPage/>}/>
-          <Route path="contact"  element={<ContactPage/>}/>
+          {routes.map(({ path, element: Component }) => (
+            <Route
+              key={path}
+              path={path}
+              element={<Component />}
+            />
+          ))}
         </Routes>
       </main>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

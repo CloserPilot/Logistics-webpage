@@ -1,70 +1,119 @@
 /* Style for the tracking section container */
 .tracking {
-    width: 80%;
-    max-width: 800px;
-    padding: 40px 40px;
-    background-color: #ffffff;
-    border: 2px solid; 
-    border-image: linear-gradient(to right, #4A00E0, #8E2DE2) 1;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    margin: 40px auto;
-    font-size: 18px;
+  width: 80%;
+  max-width: 800px;
+  padding: 40px;
+  background-color: #ffffff;
+
+  border: 2px solid;
+  border-image: linear-gradient(to right, #4A00E0, #8E2DE2) 1;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+  margin: 40px auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Style for the input field */
 .trackingInput {
-    padding: 10px;
-    width: 55%;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    font-size: 20px;
-    margin: 40px 10px;
+  padding: 14px 18px;
+  width: 60%;
+  border-radius: 30px 0 0 30px;
+  border: 1px solid #ccc;
+  border-right: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.trackingInput:focus {
+  border-color: #8E2DE2;
+  box-shadow: 0 0 0 2px rgba(142,45,226,0.2);
+}
+
+.trackingBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 /* Style for the tracking button */
 .trackingBtn {
-    padding: 10px 45px;
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
-    color: white;
-    border-radius: 4px;
-    font-size: 20px;
-    text-decoration: none;
+  padding: 14px 28px;
+  background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  color: white;
+  border: none;
+  border-radius: 0 30px 30px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .trackingBtn:hover {
-    opacity: 0.7;
+  opacity: 0.85;
+}
+
+.trackingForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 
 .tracking h1 {
-    color: #6200ee;
-    margin-top: 0;
+  color: #6200ee;
+  margin-top: 0;
 }
 
-.trackingLabel{
+.trackingLabel {
   margin: 20px
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.trackingPage {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trackingWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
-    .tracking {
-        padding: 40px 20px;
-        display: flex;
-        justify-content: center; 
-        align-items: center;     
-        flex-direction: column;
-    }
+  .tracking {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 
-    .trackingLabel {
-      margin: 0;
-    }
+  .trackingLabel {
+    margin: 0;
+  }
 
-    .trackingInput{
-      margin: 20px 10px;
-    }
+  .trackingInput {
+    margin: 20px 10px;
+  }
 
-    .tracking h1{
-      margin-top: 0;
-    }
+  .tracking h1 {
+    margin-top: 0;
+  }
 }

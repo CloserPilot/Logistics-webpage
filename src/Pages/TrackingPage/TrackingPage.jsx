@@ -1,11 +1,12 @@
-import { Footer, Header, Tracking } from "../../components"
+import CenteredLayout from '../../layouts/CenteredLayout';
+import { Tracking } from "../../components";
 
 function TrackingPage() {
   return (
-    <>
+    <CenteredLayout>
       <Tracking />
-    </>
-  )
+    </CenteredLayout>
+  );
 }
 
-export default TrackingPage
+export default TrackingPage;

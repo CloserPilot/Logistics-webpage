@@ -33,7 +33,7 @@ function Footer(){
           </li>
           <li className={styles.columnItem}>
             <i className="fa-solid fa-clock"></i>
-            <span className={`${styles.columnLink} ${styles.noHover}`}>Lun-Vie 9:00 - 18:00</span>
+            <span className={`${styles.noHover}`}>Lun-Vie 9:00 - 18:00</span>
           </li>
         </ul>
       </div>

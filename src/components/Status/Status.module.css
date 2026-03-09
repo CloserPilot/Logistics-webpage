@@ -21,6 +21,7 @@
   font-family: 'Segoe UI', sans-serif;
   color: var(--dot-active);
   position: relative;
+  width: 80vw;
 }
 
 /* Tracking number */

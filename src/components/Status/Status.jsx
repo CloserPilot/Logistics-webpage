@@ -15,7 +15,7 @@ function StatusTimeline({ steps }) {
           key={i}
           className={`${styles.step} ${styles[step.visualStatus]} ${step.lineCompleted ? styles.lineCompleted : ''}`}>
           <div className={styles.dot}>
-            {step.visualStatus === 'completed' && "✔"}
+            {step.visualStatus === 'completed' && <i className="fas fa-check"></i>}
           </div>
           <div className={styles.content}>
             <h4>{step.title}</h4>

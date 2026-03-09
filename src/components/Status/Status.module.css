@@ -3,11 +3,10 @@
   --dot-size: 28px;
   --line-width: 4px;
   --line-color: #ccc;
-  --line-gradient: linear-gradient(to bottom, #4A00E0, #8E2DE2);
-  --timeline-bg: #f9f9f9;
-  --timeline-border: linear-gradient(to right, #4A00E0, #8E2DE2) 1;
   --dot-completed: rgb(7, 114, 7);
   --dot-active: #8E2DE2;
+  --timeline-bg: #f9f9f9;
+  --timeline-border: linear-gradient(to right, #4A00E0, #8E2DE2) 1;
 }
 
 /* Contenedor principal */
@@ -46,10 +45,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  flex: 1; /* cada step ocupa igual espacio */
+  flex: 1;
 }
 
-/* Línea horizontal entre steps (desktop) */
+/* --- ANIMACIÓN DE LÍNEA PROGRESIVA (DESKTOP) --- */
 .step:not(:last-child)::after {
   content: '';
   position: absolute;
@@ -57,12 +56,15 @@
   left: 50%;
   width: 100%;
   height: var(--line-width);
-  background: var(--line-color);
+  background: linear-gradient(to right, var(--dot-active), var(--dot-active) 50%, var(--line-color) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
   z-index: 1;
+  transition: background-position 1.5s linear;
 }
 
-.step.completed:not(:last-child)::after {
-  background: var(--dot-active);
+.step.lineCompleted:not(:last-child)::after {
+  background-position: 0 0;
 }
 
 /* Dot */
@@ -80,17 +82,31 @@
   color: white;
   margin-bottom: 10px;
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+/* --- NUEVA ANIMACIÓN DE ZOOM --- */
+@keyframes zoom-in-out {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .step.completed .dot {
   background-color: var(--dot-completed);
+  /* Se aplica la nueva animación cuando el dot se completa */
+  animation: zoom-in-out 0.6s ease-out;
 }
 
 .step.active .dot {
   background-color: var(--dot-active);
   animation: blink 1s infinite;
-  transform-origin: center;
 }
 
 @keyframes blink {
@@ -118,12 +134,11 @@
   font-size: 12px;
 }
 
-/* Responsive vertical timeline */
+/* --- RESPONSIVE Y ANIMACIÓN PROGRESIVA (MOBILE) --- */
 @media (max-width: 700px) {
   .trackingTimeline {
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 20px; /* espacio entre steps */
+    gap: 20px;
     max-width: 95%;
     padding-left: 30px;
     min-width: 70vw;
@@ -132,33 +147,28 @@
   .step {
     flex-direction: row;
     align-items: flex-start;
-    position: relative;
   }
 
-  /* Línea vertical entre dots */
   .step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: calc(var(--dot-size)/2);
+    top: var(--dot-size);
     left: calc(var(--dot-size)/2);
     width: var(--line-width);
-    height: calc(100% - var(--dot-size)/2);
-    background: var(--line-color);
-    z-index: 1;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--dot-active), var(--dot-active) 50%, var(--line-color) 50%);
+    background-size: 100% 200%;
+    background-position: 0 100%;
   }
 
-  .step.completed:not(:last-child)::after {
-    background: var(--line-gradient);
+  .step.lineCompleted:not(:last-child)::after {
+    background-position: 0 0;
   }
   
-
   .content {
     text-align: left;
     margin-left: 10px;
   }
 
   .dot {
-    width: var(--dot-size);
-    height: var(--dot-size);
+    flex-shrink: 0;
   }
 }

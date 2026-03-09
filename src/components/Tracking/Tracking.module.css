@@ -1,54 +1,45 @@
 /* Style for the tracking section container */
 .tracking {
-    width: 80%; /* Set the width to 90% of the parent container */
-    max-width: 800px; /* Set a maximum width of 800px */
-    padding: 80px 40px; /* Add padding to the top/bottom and left/right */
-    background-color: #ffffff; /* Set a white background color */
-    border: 2px solid; /* Add a border */
-    border-image: linear-gradient(to right, #4A00E0, #8E2DE2) 1; /* Use a gradient for the border */
-    border-radius: 10px; /* Round the corners */
-    text-align: center; /* Center the text */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Add a more pronounced box shadow */
-    margin: 40px auto; /* Center the container horizontally */
-    font-size: 18px; /* Set the base font size */
-    font-family: sans-serif; /* Use a sans-serif font */
+    width: 80%;
+    max-width: 800px;
+    padding: 40px 40px;
+    background-color: #ffffff;
+    border: 2px solid; 
+    border-image: linear-gradient(to right, #4A00E0, #8E2DE2) 1;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin: 40px auto;
+    font-size: 18px;
 }
 
 /* Style for the input field */
 .trackingInput {
-    padding: 10px; /* Add padding */
-    width: 65%; /* Set the width to 65% */
-    margin-top: 10px; /* Add some top margin */
-    border-radius: 4px; /* Round the corners */
-    border: 1px solid #ccc; /* Add a light gray border */
-    font-size: 20px; /* Set the font size */
-    margin-bottom: 40px; /* Add some bottom margin */
+    padding: 10px;
+    width: 55%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    margin: 40px 10px;
 }
 
 /* Style for the tracking button */
 .trackingBtn {
-    padding: 10px 45px; /* Add padding */
-    margin-left: 10px; /* Add some left margin */
-    background: linear-gradient(to right, #4A00E0, #8E2DE2); /* Set a gradient background */
-    color: white; /* Set the text color to white */
-    border: none; /* Remove the border */
-    border-radius: 4px; /* Round the corners */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
-    font-size: 20px; /* Set the font size */
-    text-decoration: none; /* Remove the underline */
-    margin-top: 60px; /* Add some top margin */
-    transition: opacity 0.3s ease; /* Add a transition for the opacity */
+    padding: 10px 45px;
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    color: white;
+    border-radius: 4px;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-/* Style for the tracking button on hover */
 .trackingBtn:hover {
-    opacity: 0.9; /* Reduce the opacity on hover */
+    opacity: 0.7;
 }
 
-/* Style for the main heading in the tracking section */
+
 .tracking h1 {
-    color: #6200ee; /* Set a purple color for the heading */
-    font-family: sans-serif; /* Use a sans-serif font */
+    color: #6200ee;
+    margin-top: 0;
 }
 
 .trackingLabel{
@@ -59,15 +50,21 @@
 @media (max-width: 600px) {
     .tracking {
         padding: 40px 20px;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        flex-direction: column;
     }
 
-    .trackingInput {
-        margin-bottom: 20px;
+    .trackingLabel {
+      margin: 0;
     }
 
-    .trackingBtn {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
+    .trackingInput{
+      margin: 20px 10px;
+    }
+
+    .tracking h1{
+      margin-top: 0;
     }
 }
